@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: EloquentBasico
+        psr4_prefix: EloquentBasico
         src_path: app

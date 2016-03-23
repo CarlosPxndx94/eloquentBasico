@@ -140,10 +140,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        EloquentBasico\Providers\AppServiceProvider::class,
+        EloquentBasico\Providers\AuthServiceProvider::class,
+        EloquentBasico\Providers\EventServiceProvider::class,
+        EloquentBasico\Providers\RouteServiceProvider::class,
 
     ],
 
