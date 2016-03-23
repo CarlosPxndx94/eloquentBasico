@@ -11,27 +11,43 @@
 |
 */
 use EloquentBasico\User;
+use Faker\Factory as Faker;
 
 Route::get('/create', function () {
+	$faker = Faker::create();
     $user = User::create([
-    		'name' => 'Carlos Balcazar',
-    		'email' => 'carlossolorock@gmail.com',
+    		'name' => $faker->name,
+    		'email' => $faker->email,
     		'password' => bcrypt('123456'),
-    		'gender' => 'm',
-    		'biography' => 'Aprendiz de laravel'
+    		'gender' => $faker->randomElement(['f','m']),
+    		'biography' => $faker->text(255)
     	]);
 
-    return 'Usuario creado';
+    return $user;
 });
 
-Route::get('/update', function () {
 
-    $user = User::find(1);
+Route::get('/read/{id}', function($id){
+	$user = User::find($id);
+	return $user;
+});
 
+Route::get('/update/{id}', function ($id) {
+
+    $user = User::find($id);
+    $faker = Faker::create();
+
+    $user->name = $faker->name;
     $user->gender = 'm';
-    $user->biography = 'Aprendiz Laravel';
+    $user->biography = 'Editado';
 
     $user->save();
 
-    return 'Usuario Actualizado';
+    return $user;
+});
+
+Route::get('/delete/{id}', function($id){
+	$user = User::find($id);
+	$user->delete();
+	return 'User Eliminado';
 });
