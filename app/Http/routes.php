@@ -37,3 +37,7 @@ Route::delete('/delete/{id}', [
         'uses' => 'QueryController@eloquentDelete'
     ]);
 
+Route::get('/lists', [
+        'as' => 'lists',
+        'uses' => 'QueryController@eloquentList'
+    ]);
