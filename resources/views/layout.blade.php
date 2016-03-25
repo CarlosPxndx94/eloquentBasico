@@ -21,28 +21,7 @@
                 <li>
                     <a href="{{ route('home') }}">Home</a>
                 </li> 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Consultas Eloquent<span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="{{ route('all') }}" class="">
-                                Todos los USuarios (all)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('get', 'f') }}" class="">
-                                Lista de Usuarios Femenina (get)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('get', 'm') }}" class="">
-                                Lista de Usuarios Masculina (get)
-                            </a>
-                        </li>
-                    </ul>
-                </li>               
+                @include('partials.menuQuery')        
             </ul>
         </div>
     </nav>
