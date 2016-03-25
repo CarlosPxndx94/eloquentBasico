@@ -30,5 +30,13 @@
                 Lista de usuarios para select (LISTS)
             </a>
         </li>
+
+        <li>
+            <a href="{{ route('firstLast') }}" class="">
+                FIRST LAST
+            </a>
+        </li>
+
+        
     </ul>
 </li>
