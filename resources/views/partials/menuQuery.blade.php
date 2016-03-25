@@ -37,6 +37,12 @@
             </a>
         </li>
 
+        <li>
+            <a href="{{ route('paginate') }}" class="">
+                Paginate
+            </a>
+        </li>
+
         
     </ul>
 </li>
